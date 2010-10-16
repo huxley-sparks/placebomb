@@ -14,7 +14,9 @@ class UsersController < ApplicationController
   # GET /users/1.xml
   def show
     @user = User.find(params[:id])
-	@user.location = request.remote_ip
+#	@user.location = request.remote_ip
+#	@user.location = Geokit::Geocoders::GoogleGeocoders.geocode "920 Santa Monica Blvd, Santa Monica, Ca"
+
 
     respond_to do |format|
       format.html # show.html.erb
