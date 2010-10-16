@@ -1,5 +1,3 @@
-require 'rubygems'
-require 'geokit'
 class UsersController < ApplicationController
   # GET /users
   # GET /users.xml
@@ -16,8 +14,12 @@ class UsersController < ApplicationController
   # GET /users/1.xml
   def show
     @user = User.find(params[:id])
+	@bomb = Bomb.find(1)
+
+	# only existing users can create bombs
+	
 #	@user.location = request.remote_ip
-	@user.location = Geokit::Geocoders::GoogleGeocoders.geocode "920 Santa Monica Blvd, Santa Monica, Ca"
+#	@user.location = Geokit::Geocoders::GoogleGeocoders.geocode "920 Santa Monica Blvd, Santa Monica, Ca"
 
 
     respond_to do |format|
