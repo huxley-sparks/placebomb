@@ -1,0 +1,17 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  owner: MyString
+  title: MyString
+  description: MyText
+  location: MyString
+  private: false
+  filetype: MyString
+
+two:
+  owner: MyString
+  title: MyString
+  description: MyText
+  location: MyString
+  private: false
+  filetype: MyString

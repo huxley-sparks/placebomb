@@ -1,0 +1,30 @@
+<h1>Listing bombs</h1>
+
+<table>
+  <tr>
+    <th>Owner</th>
+    <th>Title</th>
+    <th>Description</th>
+    <th>Location</th>
+    <th>Private</th>
+    <th>Filetype</th>
+  </tr>
+
+<% @bombs.each do |bomb| %>
+  <tr>
+    <td><%=h bomb.owner %></td>
+    <td><%=h bomb.title %></td>
+    <td><%=h bomb.description %></td>
+    <td><%=h bomb.location %></td>
+    <td><%=h bomb.private %></td>
+    <td><%=h bomb.filetype %></td>
+    <td><%= link_to 'Show', bomb %></td>
+    <td><%= link_to 'Edit', edit_bomb_path(bomb) %></td>
+    <td><%= link_to 'Destroy', bomb, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New bomb', new_bomb_path %>

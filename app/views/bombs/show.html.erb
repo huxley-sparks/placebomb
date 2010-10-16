@@ -1,0 +1,33 @@
+<p>
+  <b>Owner:</b>
+  <%=h @bomb.owner %>
+</p>
+
+<p>
+  <b>Title:</b>
+  <%=h @bomb.title %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%=h @bomb.description %>
+</p>
+
+<p>
+  <b>Location:</b>
+  <%=h @bomb.location %>
+</p>
+
+<p>
+  <b>Private:</b>
+  <%=h @bomb.private %>
+</p>
+
+<p>
+  <b>Filetype:</b>
+  <%=h @bomb.filetype %>
+</p>
+
+
+<%= link_to 'Edit', edit_bomb_path(@bomb) %> |
+<%= link_to 'Back', bombs_path %>

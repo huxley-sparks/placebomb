@@ -1,3 +1,5 @@
+require 'rubygems'
+require 'geokit'
 class UsersController < ApplicationController
   # GET /users
   # GET /users.xml
@@ -15,7 +17,7 @@ class UsersController < ApplicationController
   def show
     @user = User.find(params[:id])
 #	@user.location = request.remote_ip
-#	@user.location = Geokit::Geocoders::GoogleGeocoders.geocode "920 Santa Monica Blvd, Santa Monica, Ca"
+	@user.location = Geokit::Geocoders::GoogleGeocoders.geocode "920 Santa Monica Blvd, Santa Monica, Ca"
 
 
     respond_to do |format|
