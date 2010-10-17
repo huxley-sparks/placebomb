@@ -3,6 +3,8 @@ ActionController::Routing::Routes.draw do |map|
 
   map.resources :users
 
+  # use /bombs as index for all bombs
+
   # each map under this has a *_path and *_url
   map.home 	'/home',	:controller => 'pages',	:action => 'home' 
   map.contact 	'/contact',	:controller => 'pages',	:action => 'contact'
