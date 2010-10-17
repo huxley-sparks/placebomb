@@ -21,7 +21,7 @@ class UsersController < ApplicationController
 	# only existing users can create bombs
 	
 #	@user.location = request.remote_ip
-	@user.location = GoogleGeocoders.geocode "920 Santa Monica Blvd, Santa Monica, Ca"
+#   @user.location = GoogleGeocoders.geocode "920 Santa Monica Blvd, Santa Monica, Ca"
 
 
     respond_to do |format|
