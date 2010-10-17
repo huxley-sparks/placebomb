@@ -6,7 +6,7 @@ ActionController::Routing::Routes.draw do |map|
   # use /bombs as index for all bombs
 
   # each map under this has a *_path and *_url
-  map.home 	'/home',	:controller => 'pages',	:action => 'home' 
+  map.home 	'/home',	:controller => 'pages',	:action => 'index' 
   map.contact 	'/contact',	:controller => 'pages',	:action => 'contact'
   map.create 	'/create',	:controller => 'pages',	:action => 'create'
   map.log_in 	'/log_in',	:controller => 'pages',	:action => 'log_in'
@@ -19,7 +19,7 @@ ActionController::Routing::Routes.draw do |map|
 
 
 
-  map.root :controller => "pages", :action => 'home'
+  map.root :controller => "pages", :action => 'index'
 
 
   # The priority is based upon order of creation: first created -> highest priority.

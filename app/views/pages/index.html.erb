@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Place BOMB</title>
+<link href="/stylesheets/_css/reset.css" rel="stylesheet" type="text/css" />
+<link href="/stylesheets/_css/styles.css" rel="stylesheet" type="text/css" />
+
+<link rel="shortcut icon" href="/favicon.ico" /><!--Favorite Icon-->
+<!--[if IE]>
+	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+<!--[if lte IE 7]>
+	<script src="_js/IE8.js" type="text/javascript"></script><![endif]-->
+</head>
+
+<body class="home">
+<header id="mainHeader">
+	<div class="container">
+		<h1 id="logo"><a href="/">PlaceBOMB.com</a></h1>
+		<div id="search">
+			<form action="/search" method="get" accept-charset="utf-8">
+			<input type="text" name="query" value="search" id="query">
+			<input type="submit" value="Continue &rarr;"></p>
+			</form>
+		</div>
+		
+		<nav id="mainNav" class="cr">
+	    	<ul>
+				<li><%= link_to "About", about_path %></li>
+				<li><%= link_to "Contact", contact_path %></li>
+				<li><%= link_to "Log in", log_in_path %></li>
+	        </ul>
+	     </nav>
+    </div>	
+</header><!--End Header-->
+<div class="clear"></div>
+
+<div class="container">
+	<section class="mainContent">
+		<h2>BOMBS near you.</h2>	
+		<figure id="googleMap"><!-- Google Map -->
+			<%= image_tag "home-map.png" %>
+			<!--img src="_images/home-map.png" width="602" height="483" alt="Home Map"-->
+		</figure>
+
+		<article class="bombItem">
+			<div class="music fl">
+				<h3><a href="#">Atomic Toms Fan Meetup</a></h3>
+				<p>1000 Santa Monica Blvd. Los Angeles, CA</p>
+			 </div>		
+			<div class="fr social">
+				<%= image_tag("twitter.png", :alt => "Twitter") %>
+				<%= image_tag("facebook.png", :alt => "Facebook") %>
+			</div>
+			<div class="clear"></div>
+		</article>
+	
+		<!-- start loop for bombs -->
+		<article class="bombItem">
+			<!-- change class depending on bomb type -->
+			<div class="<% #dynamic class {music,video,pdf,image,social} %> fl">
+				<h3><a href="#"><% #bomb title %></a></h3>
+				<p><% #address %></p>
+			</div>
+			<div class="fr social">
+				<a href="#"><img class="socialIcon" src="_images/icons/twitter.png" width="36" height="37" alt="Twitter"></a>
+				<a href="#"><img class="socialIcon" src="_images/icons/facebook.png" width="36" height="37" alt="Facebook"></a>
+			</div>
+			<div class="clear"></div>
+		</article>
+		<!-- end loop for bombs -->	
+		
+	</section>
+
+	<section id="sidebar">
+		<div class="sidebarTop"></div>
+		<aside class="uploadForm">
+			<h2>Start Sharing Now</h2>
+			<p>Pick a venue and Place Bomb will share files such as coupons, songs, notes, and virtual goods with fans, friends, and customers.</p>
+			<form action="/" method="get" accept-charset="utf-8">
+				<label for="venue">Venue</label><input type="text" name="venue" value="" id="formVenue">
+				<label for="file">File</label><input type="file" name="file" value="" id="formFile">
+				<input type="submit" value="Share Now" id="shareNow">
+			</form>
+			<div class="clear"></div>
+		</aside>
+		<div class="sidebarBottom"></div>
+	</section>
+    
+	<div class="clear"></div>
+
+	<footer id="footer">
+		<ul class="centered">
+			<li>about</li>
+			<li>contact</li>
+			<li>privacy</li>
+			<li>terms of service</li>
+		</ul>
+	</footer>
+
+</div><!--End Container-->
+</body>
+</html>
