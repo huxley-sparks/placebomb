@@ -3,7 +3,8 @@ ActionController::Routing::Routes.draw do |map|
 
   map.resources :users
 
-  map.home 	'/home',	:controller => 'pages',	:action => 'home'
+  # each map under this has a *_path and *_url
+  map.home 	'/home',	:controller => 'pages',	:action => 'home' 
   map.contact 	'/contact',	:controller => 'pages',	:action => 'contact'
   map.create 	'/create',	:controller => 'pages',	:action => 'create'
   map.log_in 	'/log_in',	:controller => 'pages',	:action => 'log_in'
@@ -16,7 +17,7 @@ ActionController::Routing::Routes.draw do |map|
 
 
 
-   map.root :controller => "pages", :action => 'home'
+  map.root :controller => "pages", :action => 'home'
 
 
   # The priority is based upon order of creation: first created -> highest priority.
