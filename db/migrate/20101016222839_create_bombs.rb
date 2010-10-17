@@ -7,9 +7,11 @@ class CreateBombs < ActiveRecord::Migration
       t.string :location
       t.boolean :private
       t.string :filetype
+	  t.integer :user_id
 
       t.timestamps
     end
+	add_index :bombs, :user_id
   end
 
   def self.down

@@ -18,9 +18,12 @@ ActiveRecord::Schema.define(:version => 20101016222839) do
     t.string   "location"
     t.boolean  "private"
     t.string   "filetype"
+    t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  add_index "bombs", ["user_id"], :name => "index_bombs_on_user_id"
 
   create_table "users", :force => true do |t|
     t.string   "name"
