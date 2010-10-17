@@ -19,9 +19,10 @@ class UsersController < ApplicationController
 #	@bomb = Bomb.find(1)
 
 	# only existing users can create bombs
-	
-#	@user.location = request.remote_ip
-   @user.location = GoogleGeocoder.geocode "920 Santa Monica Blvd, Santa Monica, Ca"
+
+   # get location by user's ip address
+   ip_address = request.remote_ip
+   @user.location = GoogleGeocoder.geocode("#{ip_address}").ll
 
 
     respond_to do |format|
