@@ -11,7 +11,7 @@ Front-end: Skot Carruth
 body{
 	font-family: arial, sans-serif;
 	font-size: .625em;
-	background:#7e8188 url('../_images/bg/tile.gif') repeat;
+	background:#7e8188 url('/images/bg/tile.gif') repeat;
 	color:#fff;
 }
 
@@ -24,13 +24,13 @@ body{
 /* ~~~~~ Header ~~~~~ */
 
 #mainHeader{
-    background:url(../_images/bg/header.png) repeat-x;
+    background:url(/images/bg/header.png) repeat-x;
     height:120px;
     width:100%;
 }
 h1#logo{
     text-indent:-9999px;
-    background:url(../_images/placebomb-logo.png) no-repeat top left;
+    background:url(/images/placebomb-logo.png) no-repeat top left;
     display:block;
     height:123px;width:222px;
     float:left;
@@ -99,12 +99,12 @@ h1#logo{
 .sidebarTop{
 	width: 285px;
 	height: 18px;
-	background: transparent url('../_images/sidebar-top.png') no-repeat ;
+	background: transparent url('/images/sidebar-top.png') no-repeat ;
 }
 .sidebarBottom{
 	width: 285px;
 	height: 47px;
-	background: transparent url('../_images/sidebar-bottom.png') no-repeat left;
+	background: transparent url('/images/sidebar-bottom.png') no-repeat left;
 }
 .uploadForm{
 	background: #88abcd;
